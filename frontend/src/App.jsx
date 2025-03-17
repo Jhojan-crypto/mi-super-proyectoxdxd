@@ -9,13 +9,13 @@ function App() {
   const [counter, setCounter] = useState(0);
 
   useEffect(() => {
-    axios.get("http://localhost:5000/api/counter").then((response) => {
+    axios.get("https://mi-super-proyectoxdxd-production.up.railway.app/api/counter").then((response) => {
       setCounter(response.data.counter);
     });
   }, []);
 
   const incrementCounter = () => {
-    axios.post("http://localhost:5000/api/counter/increment").then((response) => {
+    axios.post("https://mi-super-proyectoxdxd-production.up.railway.app/api/counter/increment").then((response) => {
       setCounter(response.data.counter);
     });
   };
