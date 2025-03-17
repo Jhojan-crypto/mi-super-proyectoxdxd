@@ -1,3 +1,4 @@
+# filepath: c:\Users\aparato\mi-super-proyecto-xdxdxd\docker-compose.yml
 version: "3.8"
 
 services:
@@ -8,6 +9,8 @@ services:
     env_file:
       - ./backend/.env
     restart: always
+    networks:
+      - app-network
 
   frontend:
     build: ./frontend
@@ -16,3 +19,9 @@ services:
     depends_on:
       - backend
     restart: always
+    networks:
+      - app-network
+
+networks:
+  app-network:
+    driver: bridge
