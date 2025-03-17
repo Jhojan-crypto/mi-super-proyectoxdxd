@@ -7,8 +7,11 @@ export default defineConfig({
   server: {
     port: 5173,
     host: true,
-    preview: {
-      allowedHosts: ['abundant-tranquility-production.up.railway.app']
-    }
+    allowedHosts: ['abundant-tranquility-production.up.railway.app']
+  },
+  preview: {
+    port: 5173,
+    host: true,
+    allowedHosts: ['abundant-tranquility-production.up.railway.app']
   }
 })
